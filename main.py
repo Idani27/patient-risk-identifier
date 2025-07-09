@@ -25,13 +25,13 @@ input_df = pd.DataFrame([input_data], columns=['depression', 'anxiety', 'panic',
 prediction = model.predict(input_df)[0]
 
     # Make prediction
-    prediction = model.predict([input_data])[0]  # Adjust if your model needs different input
+prediction = model.predict([input_data])[0]  # Adjust if your model needs different input
 
     # Display result
-    if prediction == 1:
-        st.markdown("<p class='risk'>⚠️ At risk. Please consider seeking professional help.</p>", unsafe_allow_html=True)
-    else:
-        st.markdown("<p class='safe'>✅ Safe. Keep taking care of your mental well-being!</p>", unsafe_allow_html=True)
+if prediction == 1:
+    st.markdown("<p class='risk'>⚠️ At risk. Please consider seeking professional help.</p>", unsafe_allow_html=True)
+else:
+    st.markdown("<p class='safe'>✅ Safe. Keep taking care of your mental well-being!</p>", unsafe_allow_html=True)
 
 # Optional: Add custom styling
 st.markdown("""
