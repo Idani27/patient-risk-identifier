@@ -1,0 +1,21 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment files (if any)
+.env
+venv/
+env/
+
+# Ignore model files if they are large and you don't want to upload them
+models/
+
+# Ignore data files if they are large or sensitive
+data/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

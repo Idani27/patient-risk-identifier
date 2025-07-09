@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suicide Risk Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em auto;
+            max-width: 600px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            padding: 10px;
+            margin: 8px 0;
+            width: 100%;
+            border-radius: 4px;
+        }
+        .risk {
+            color: red;
+            font-weight: bold;
+        }
+        .safe {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 Suicide Risk Predictor</h1>
+    <p>This tool uses mental health indicators to assess whether a student may be at risk and needs support.</p>
+
+    <form method="POST" action="/predict">
+        <label>Do you have Depression?</label>
+        <select name="depression">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <label>Do you have Anxiety?</label>
+        <select name="anxiety">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <label>Do you have Panic attacks?</label>
+        <select name="panic">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <label>Have you sought treatment?</label>
+        <select name="treatment">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+
+        <button type="submit">🔎 Predict</button>
+    </form>
+
+    {% if prediction %}
+        <p class="{{ status }}">{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
