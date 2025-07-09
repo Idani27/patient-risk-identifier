@@ -4,7 +4,7 @@ import streamlit as st
 import pickle  # or joblib, depending on your model
 
 # Load your model (update this path if needed)
-model = pickle.load(open('models/your_model.pkl', 'rb'))  # Change filename if needed
+model = pickle.load(open('models/suicide_risk_model.pkl', 'rb'))
 
 st.set_page_config(page_title="Suicide Risk Predictor")
 st.title("🧠 Suicide Risk Predictor")
