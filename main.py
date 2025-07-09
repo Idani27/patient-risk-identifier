@@ -19,14 +19,10 @@ with st.form("risk_form"):
     submitted = st.form_submit_button("🔎 Predict")
 
 # Predict
-if submitted:
-    # Convert answers to model input format (e.g., binary 0/1)
-    input_data = [
-        1 if depression == "Yes" else 0,
-        1 if anxiety == "Yes" else 0,
-        1 if panic == "Yes" else 0,
-        1 if treatment == "Yes" else 0,
-    ]
+import pandas as pd
+
+input_df = pd.DataFrame([input_data], columns=['depression', 'anxiety', 'panic', 'treatment'])
+prediction = model.predict(input_df)[0]
 
     # Make prediction
     prediction = model.predict([input_data])[0]  # Adjust if your model needs different input
