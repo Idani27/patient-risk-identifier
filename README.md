@@ -37,5 +37,5 @@ While the model provides a risk classification, **it is not a diagnostic tool** 
 
 ## 🔗 Live Demo
 
-You can try the Suicide Risk Predictor tool here:  
+You can try the Suicide Risk Predictor tool here:  http://localhost:5000/ 
 👉 [Click to Open in Replit](https://replit.com/join/kfvhgcxxwg-singoidani7)
